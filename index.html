@@ -20,8 +20,8 @@
 --pad:clamp(20px,5vw,80px);
 }
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-wrap:pretty;overflow-x:hidden;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-wrap:pretty;}
 a{color:var(--accent);text-decoration:none;}
 a:hover{color:var(--ink);}
 h1,h2,h3,h4,p,figure,blockquote{margin:0;}
@@ -35,10 +35,10 @@ button,input,textarea,select{font:inherit;color:inherit;}
 <div data-joh-root="1" style="position:relative; background:var(--paper); font-family:var(--sans); line-height:1.55;">
 
 <header data-joh-header="1" style="position:absolute; top:0; left:0; right:0; z-index:100;">
-  <div style="max-width:1480px; margin:0 auto; padding:0 var(--pad); min-height:76px; display:flex; align-items:center; gap:clamp(16px,3vw,48px);">
+  <div data-joh-header-inner="1" style="max-width:1480px; margin:0 auto; padding:0 var(--pad); min-height:76px; display:flex; align-items:center; gap:clamp(16px,3vw,48px);">
     <a href="#top" data-joh-logo="1" aria-label="Home" title="Home" style="display:flex; align-items:center; gap:12px; min-height:44px; color:var(--paper);">
       <span data-joh-logo-mark="1" style="display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; border:1px solid rgba(247,245,242,.45); color:var(--paper); font-family:var(--sans); font-weight:400; font-size:13.5px; letter-spacing:.06em; transition:border-color .45s ease, background .45s ease, color .45s ease;">JOH</span>
-      <span style="display:flex; flex-direction:column; line-height:1.15;">
+      <span data-joh-logo-text="1" style="display:flex; flex-direction:column; line-height:1.15;">
         <span data-joh-logo-name="1" style="font-family:var(--serif); font-size:17px; letter-spacing:.01em; transition:color .45s ease;">Dr Justine O'Hara</span>
         <span data-joh-logo-sub="1" style="font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:#A8A19E; transition:color .45s ease;">Plastic Surgeon</span>
       </span>
@@ -96,7 +96,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
         <span style="font-size:clamp(9.5px,1vw,11px); letter-spacing:.24em; text-transform:uppercase; color:#C9C3BF;">Plastic &amp; Reconstructive Surgeon &#183; Sydney</span>
       </div>
 
-      <h1 data-reveal="up" data-reveal-delay="90" style="margin-top:clamp(14px,2.2vh,28px); font-family:var(--serif); font-weight:400; font-size:clamp(40px,8.6vw,132px); line-height:.92; letter-spacing:-.025em; opacity:0; transform:translateY(26px); transition:opacity 1s cubic-bezier(.2,.7,.3,1), transform 1s cubic-bezier(.2,.7,.3,1);">
+      <h1 data-joh-h1="1" data-reveal="up" data-reveal-delay="90" style="margin-top:clamp(14px,2.2vh,28px); font-family:var(--serif); font-weight:400; font-size:clamp(40px,8.6vw,132px); line-height:.92; letter-spacing:-.025em; opacity:0; transform:translateY(26px); transition:opacity 1s cubic-bezier(.2,.7,.3,1), transform 1s cubic-bezier(.2,.7,.3,1);">
         Dr Justine <span style="font-style:italic; color:var(--accent-dark);">O'Hara</span>
       </h1>
 
@@ -180,7 +180,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
 
   <section id="procedures" style="background:var(--ink); color:var(--paper); padding:clamp(64px,9vw,140px) 0;">
     <div style="max-width:1480px; margin:0 auto; padding:0 var(--pad);">
-      <div data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(24px,4vw,72px); align-items:end; opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
+      <div data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:clamp(24px,4vw,72px); align-items:end; opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
         <div>
           <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--accent-dark);">Surgical scope</span>
           <h2 style="margin-top:18px; font-family:var(--serif); font-weight:400; font-size:clamp(32px,5vw,68px); line-height:1.04; letter-spacing:-.02em;">Eight areas of practice</h2>
@@ -201,7 +201,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
             </span>
           </button>
           <div data-joh-panel="1" style="max-height:0; overflow:hidden; transition:max-height .55s cubic-bezier(.2,.7,.3,1);">
-            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:2px 32px;">
+            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:2px 32px;">
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Breast Reconstruction</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Burns Surgery</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Lower Limb Reconstruction</a>
@@ -221,7 +221,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
             </span>
           </button>
           <div data-joh-panel="1" style="max-height:0; overflow:hidden; transition:max-height .55s cubic-bezier(.2,.7,.3,1);">
-            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:2px 32px;">
+            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:2px 32px;">
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Breast Augmentation (Implants/Fat Grafting)</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Breast Reduction</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Breast Mastopexy (Lift)</a>
@@ -247,7 +247,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
             </span>
           </button>
           <div data-joh-panel="1" style="max-height:0; overflow:hidden; transition:max-height .55s cubic-bezier(.2,.7,.3,1);">
-            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:2px 32px;">
+            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:2px 32px;">
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Abdominoplasty</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Extended Abdominoplasty</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Mini Abdominoplasty</a>
@@ -272,7 +272,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
             </span>
           </button>
           <div data-joh-panel="1" style="max-height:0; overflow:hidden; transition:max-height .55s cubic-bezier(.2,.7,.3,1);">
-            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:2px 32px;">
+            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:2px 32px;">
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Face Lift</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Neck Lift</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Eyelid Reduction</a>
@@ -295,7 +295,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
             </span>
           </button>
           <div data-joh-panel="1" style="max-height:0; overflow:hidden; transition:max-height .55s cubic-bezier(.2,.7,.3,1);">
-            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:2px 32px;">
+            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:2px 32px;">
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Functional Rhinoplasty</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Cosmetic Rhinoplasty</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Liquid Rhinoplasty</a>
@@ -314,7 +314,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
             </span>
           </button>
           <div data-joh-panel="1" style="max-height:0; overflow:hidden; transition:max-height .55s cubic-bezier(.2,.7,.3,1);">
-            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:2px 32px;">
+            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:2px 32px;">
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Labiaplasty</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Monsplasty</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Fat Grafting</a>
@@ -333,7 +333,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
             </span>
           </button>
           <div data-joh-panel="1" style="max-height:0; overflow:hidden; transition:max-height .55s cubic-bezier(.2,.7,.3,1);">
-            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:2px 32px;">
+            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:2px 32px;">
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Malignant &amp; Benign Skin Lesions and Reconstruction</a>
             </div>
           </div>
@@ -350,7 +350,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
             </span>
           </button>
           <div data-joh-panel="1" style="max-height:0; overflow:hidden; transition:max-height .55s cubic-bezier(.2,.7,.3,1);">
-            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:2px 32px;">
+            <div style="padding:4px 0 34px clamp(0px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:2px 32px;">
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Facial Relaxation Treatments</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Facial Revolumisation</a>
               <a href="#enquire" style="min-height:44px; display:flex; align-items:center; color:#D8D3CF; font-size:15.5px; border-bottom:1px solid rgba(247,245,242,.1);" style-hover="color:var(--accent-dark);">Hyperhydrosis</a>
@@ -363,7 +363,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
   </section>
 
   <section id="about" style="padding:clamp(64px,9vw,140px) var(--pad); max-width:1480px; margin:0 auto;">
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,5vw,88px);">
+    <div data-joh-about-grid="1" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:clamp(32px,5vw,88px);">
       <div data-reveal="fade" style="opacity:0; transition:opacity 1.1s ease;">
         <div style="position:sticky; top:110px; aspect-ratio:3/4; border-radius:24px; overflow:hidden; border:1px solid var(--line); background:var(--soft);">
           <img src="img/portrait.png" alt="Dr Justine O'Hara" style="width:100%; height:100%; object-fit:cover; object-position:50% 22%; display:block;" />
@@ -412,7 +412,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
         <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted);">Teaching, research and leadership</span>
         <h2 style="margin-top:18px; font-family:var(--serif); font-weight:400; font-size:clamp(28px,3.8vw,50px); line-height:1.1; letter-spacing:-.02em; max-width:20ch;">Work beyond the operating theatre</h2>
       </div>
-      <div style="margin-top:clamp(28px,4vw,56px); display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line);">
+      <div style="margin-top:clamp(28px,4vw,56px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr)); gap:1px; background:var(--line); border:1px solid var(--line);">
         <div data-reveal="up" style="background:var(--soft); padding:clamp(24px,3vw,40px); opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
           <span style="font-family:var(--mono); font-size:11px; color:var(--accent);">01</span>
           <h3 style="margin-top:14px; font-family:var(--serif); font-weight:400; font-size:clamp(19px,1.7vw,25px); line-height:1.25;">Severe Burns Injury Service of NSW</h3>
@@ -433,7 +433,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
   </section>
 
   <section id="patient-information" style="padding:clamp(64px,9vw,140px) var(--pad); max-width:1480px; margin:0 auto;">
-    <div data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(20px,4vw,72px); align-items:end; opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
+    <div data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:clamp(20px,4vw,72px); align-items:end; opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
       <div>
         <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted);">Patient information</span>
         <h2 style="margin-top:18px; font-family:var(--serif); font-weight:400; font-size:clamp(30px,4.4vw,60px); line-height:1.06; letter-spacing:-.02em;">What to expect</h2>
@@ -444,7 +444,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
       </p>
     </div>
 
-    <div style="margin-top:clamp(32px,4vw,64px); display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line);">
+    <div data-joh-steps-grid="1" style="margin-top:clamp(32px,4vw,64px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr)); gap:1px; background:var(--line); border:1px solid var(--line);">
       <div data-reveal="up" style="background:var(--paper); padding:clamp(24px,2.6vw,36px); opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
         <span style="font-family:var(--mono); font-size:11px; color:var(--accent);">STEP 01</span>
         <h3 style="margin-top:14px; font-family:var(--serif); font-weight:400; font-size:clamp(19px,1.6vw,24px);">Referral and booking</h3>
@@ -467,7 +467,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
       </div>
     </div>
 
-    <div style="margin-top:clamp(36px,4vw,64px); display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(20px,2.5vw,40px);">
+    <div style="margin-top:clamp(36px,4vw,64px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr)); gap:clamp(20px,2.5vw,40px);">
       <div data-reveal="up" style="border:1px solid var(--line); padding:clamp(24px,2.6vw,36px); opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
         <div style="display:flex; align-items:center; gap:10px;">
           <h3 style="font-family:var(--serif); font-weight:400; font-size:clamp(20px,1.8vw,26px);">Fees and health funds</h3>
@@ -487,7 +487,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
 
   <section style="background:var(--ink); color:var(--paper); padding:clamp(56px,7vw,110px) var(--pad);">
     <div style="max-width:1480px; margin:0 auto;">
-      <div data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(20px,4vw,72px); align-items:end; opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
+      <div data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:clamp(20px,4vw,72px); align-items:end; opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
         <div>
           <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--accent-dark);">Before &amp; after</span>
           <h2 style="margin-top:18px; font-family:var(--serif); font-weight:400; font-size:clamp(28px,3.8vw,50px); line-height:1.1; letter-spacing:-.02em; max-width:16ch;">The work, before and after</h2>
@@ -517,7 +517,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
           </div>
         </div>
 
-        <div data-joh-thumbs="1" style="grid-column:2; grid-row:2; display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:clamp(8px,1vw,14px);">
+        <div data-joh-thumbs="1" style="grid-column:2; grid-row:2; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(110px,100%),1fr)); gap:clamp(8px,1vw,14px);">
           <button type="button" data-joh-case="Facial skin lesion excision and reconstruction" data-joh-src="img/ba-05.png" style="padding:0; border:1px solid var(--accent-dark); border-radius:14px; overflow:hidden; background:none; cursor:pointer; aspect-ratio:2/1; transition:border-color .25s ease, opacity .25s ease;"><img src="img/ba-05.png" alt="Case 01 thumbnail" style="width:100%; height:100%; object-fit:cover; display:block;" /></button>
           <button type="button" data-joh-case="Breast reduction and lift &#8212; front view" data-joh-src="img/ba-01.png" style="padding:0; border:1px solid rgba(247,245,242,.2); border-radius:14px; overflow:hidden; background:none; cursor:pointer; aspect-ratio:2/1; opacity:.6; transition:border-color .25s ease, opacity .25s ease;"><img src="img/ba-01.png" alt="Case 02 thumbnail" style="width:100%; height:100%; object-fit:cover; display:block;" /></button>
           <button type="button" data-joh-case="Breast reduction and lift &#8212; oblique view" data-joh-src="img/ba-02.png" style="padding:0; border:1px solid rgba(247,245,242,.2); border-radius:14px; overflow:hidden; background:none; cursor:pointer; aspect-ratio:2/1; opacity:.6; transition:border-color .25s ease, opacity .25s ease;"><img src="img/ba-02.png" alt="Case 03 thumbnail" style="width:100%; height:100%; object-fit:cover; display:block;" /></button>
@@ -760,7 +760,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
   </section>
 
   <section style="background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:clamp(56px,7vw,110px) var(--pad);">
-    <div style="max-width:1480px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(28px,5vw,80px);">
+    <div style="max-width:1480px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:clamp(28px,5vw,80px);">
       <div data-reveal="up" style="opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
         <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted);">Common questions</span>
         <h2 style="margin-top:18px; font-family:var(--serif); font-weight:400; font-size:clamp(30px,4.4vw,56px); line-height:1.06; letter-spacing:-.02em; max-width:14ch;">Before you enquire</h2>
@@ -793,7 +793,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
   </section>
 
   <section id="locations" style="padding:clamp(64px,9vw,130px) var(--pad); max-width:1480px; margin:0 auto;">
-    <div data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(20px,4vw,72px); align-items:end; opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
+    <div data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:clamp(20px,4vw,72px); align-items:end; opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
       <div>
         <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted);">Locations</span>
         <h2 style="margin-top:18px; font-family:var(--serif); font-weight:400; font-size:clamp(30px,4.4vw,60px); line-height:1.06; letter-spacing:-.02em;">Three rooms across Sydney</h2>
@@ -801,7 +801,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
       <p style="font-size:15.5px; line-height:1.68; color:var(--muted); max-width:44ch; padding-bottom:6px;">All are easy to access with plenty of parking, and all three take bookings.</p>
     </div>
 
-    <div style="margin-top:clamp(32px,4vw,64px); display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line);">
+    <div style="margin-top:clamp(32px,4vw,64px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr)); gap:1px; background:var(--line); border:1px solid var(--line);">
       <div data-reveal="up" data-joh-room="1" style="background:var(--paper); padding:clamp(26px,3vw,44px); display:flex; flex-direction:column; gap:18px; opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1), background .4s ease;">
         <div style="display:flex; align-items:baseline; justify-content:space-between; gap:14px;">
           <h3 style="font-family:var(--serif); font-weight:400; font-size:clamp(22px,2.2vw,32px); line-height:1.15;">Drummoyne</h3>
@@ -828,15 +828,15 @@ button,input,textarea,select{font:inherit;color:inherit;}
   </section>
 
   <section id="enquire" style="background:var(--ink); color:var(--paper); padding:clamp(64px,9vw,140px) var(--pad);">
-    <div style="max-width:1480px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,5vw,88px);">
+    <div data-joh-enquire-grid="1" style="max-width:1480px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:clamp(32px,5vw,88px);">
       <div data-reveal="up" style="opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);">
         <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--accent-dark);">Enquire</span>
         <h2 style="margin-top:18px; font-family:var(--serif); font-weight:400; font-size:clamp(32px,5vw,68px); line-height:1.04; letter-spacing:-.02em; max-width:12ch;">Start a conversation</h2>
         <p style="margin-top:24px; font-size:clamp(15.5px,1.2vw,18px); line-height:1.68; color:#A8A19E; max-width:44ch;">Call the room nearest you, or send an enquiry and the practice will respond. Please do not include clinical detail or images in this form.</p>
         <div style="margin-top:32px; display:flex; flex-direction:column; gap:10px;">
-          <a href="tel:+61285519800" style="min-height:48px; display:flex; align-items:center; gap:14px; color:var(--paper); font-size:16px; border-bottom:1px solid rgba(247,245,242,.18);" style-hover="color:var(--accent-dark);"><span style="font-family:var(--mono); font-size:11px; color:var(--accent-dark); width:120px;">DRUMMOYNE / NORWEST</span>(02) 8551 9800</a>
-          <a href="tel:+61298123899" style="min-height:48px; display:flex; align-items:center; gap:14px; color:var(--paper); font-size:16px; border-bottom:1px solid rgba(247,245,242,.18);" style-hover="color:var(--accent-dark);"><span style="font-family:var(--mono); font-size:11px; color:var(--accent-dark); width:120px;">MACQUARIE UNI</span>(02) 9812 3899</a>
-          <a href="mailto:info@drjustineohara.com.au" style="min-height:48px; display:flex; align-items:center; gap:14px; color:var(--paper); font-size:16px; border-bottom:1px solid rgba(247,245,242,.18);" style-hover="color:var(--accent-dark);"><span style="font-family:var(--mono); font-size:11px; color:var(--accent-dark); width:120px;">EMAIL</span>info@drjustineohara.com.au</a>
+          <a href="tel:+61285519800" style="min-height:48px; display:flex; flex-wrap:wrap; align-items:center; gap:4px 14px; padding:8px 0; overflow-wrap:anywhere; color:var(--paper); font-size:16px; border-bottom:1px solid rgba(247,245,242,.18);" style-hover="color:var(--accent-dark);"><span style="flex:none; font-family:var(--mono); font-size:11px; color:var(--accent-dark); width:120px;">DRUMMOYNE / NORWEST</span>(02) 8551 9800</a>
+          <a href="tel:+61298123899" style="min-height:48px; display:flex; flex-wrap:wrap; align-items:center; gap:4px 14px; padding:8px 0; overflow-wrap:anywhere; color:var(--paper); font-size:16px; border-bottom:1px solid rgba(247,245,242,.18);" style-hover="color:var(--accent-dark);"><span style="flex:none; font-family:var(--mono); font-size:11px; color:var(--accent-dark); width:120px;">MACQUARIE UNI</span>(02) 9812 3899</a>
+          <a href="mailto:info@drjustineohara.com.au" style="min-height:48px; display:flex; flex-wrap:wrap; align-items:center; gap:4px 14px; padding:8px 0; overflow-wrap:anywhere; color:var(--paper); font-size:16px; border-bottom:1px solid rgba(247,245,242,.18);" style-hover="color:var(--accent-dark);"><span style="flex:none; font-family:var(--mono); font-size:11px; color:var(--accent-dark); width:120px;">EMAIL</span>info@drjustineohara.com.au</a>
         </div>
       </div>
 
@@ -884,7 +884,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
         <span style="display:grid; place-items:center; width:44px; height:44px; border-radius:50%; background:var(--accent-tint); color:var(--accent); font-family:var(--mono); font-size:14px;">&#8599;</span>
       </a>
     </div>
-    <div style="margin-top:clamp(20px,2.5vw,36px); display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:clamp(10px,1.2vw,16px);">
+    <div style="margin-top:clamp(20px,2.5vw,36px); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(180px,100%),1fr)); gap:clamp(10px,1.2vw,16px);">
       <a href="https://www.instagram.com/drjustineohara/" target="_blank" rel="noopener noreferrer" style="display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; border:1px solid var(--line); transition:transform .35s ease;" style-hover="transform:translateY(-4px);"><img src="img/ig-01.png" alt="Dr O'Hara at a RACS event" style="width:100%; height:100%; object-fit:cover; display:block;" /></a>
       <a href="https://www.instagram.com/drjustineohara/" target="_blank" rel="noopener noreferrer" style="display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; border:1px solid var(--line); transition:transform .35s ease;" style-hover="transform:translateY(-4px);"><img src="img/ig-02.png" alt="The team at Plastic Surgery Collective" style="width:100%; height:100%; object-fit:cover; display:block;" /></a>
       <a href="https://www.instagram.com/drjustineohara/" target="_blank" rel="noopener noreferrer" style="display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; border:1px solid var(--line); transition:transform .35s ease;" style-hover="transform:translateY(-4px);"><img src="img/ig-03.png" alt="At the 47th Annual ASAPS Conference" style="width:100%; height:100%; object-fit:cover; display:block;" /></a>
@@ -900,7 +900,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
 <div data-joh-modal="1" role="dialog" aria-modal="true" aria-label="Menu and consultation request" style="position:fixed; inset:0; z-index:130; display:none; background:var(--ink); opacity:0; transition:opacity .4s ease; overflow-y:auto;">
 
   <button type="button" data-joh-modal-close="1" aria-label="Close menu" style="position:fixed; top:clamp(16px,2.4vw,28px); right:clamp(16px,2.4vw,28px); z-index:6; min-height:52px; display:inline-flex; align-items:center; gap:12px; padding:5px 6px 5px 22px; border-radius:999px; background:var(--ink); border:1px solid rgba(247,245,242,.35); color:var(--paper); font-size:14px; letter-spacing:.03em; line-height:1; cursor:pointer; box-shadow:0 10px 30px rgba(0,0,0,.35); transition:background .3s ease;" style-hover="background:var(--accent);">
-    Close
+    <span data-joh-close-label="1">Close</span>
     <span style="display:grid; place-items:center; width:40px; height:40px; border-radius:50%; background:rgba(247,245,242,.14); font-size:20px;">&#215;</span>
   </button>
 
@@ -1014,7 +1014,7 @@ button,input,textarea,select{font:inherit;color:inherit;}
 <div data-joh-footer-wrap="1" style="position:relative; overflow:hidden;">
 <footer data-joh-footer="1" style="position:relative; z-index:1; will-change:transform; background:var(--ink); color:var(--paper); border-radius:clamp(26px,4vw,72px) clamp(26px,4vw,72px) 0 0; padding:clamp(34px,4.4vw,64px) var(--pad) 22px; overflow:hidden;">
   <div style="max-width:1480px; margin:0 auto;">
-    <div data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(28px,4vw,64px); opacity:0; transform:translateY(28px); transition:opacity 1s cubic-bezier(.2,.7,.3,1), transform 1s cubic-bezier(.2,.7,.3,1);">
+    <div data-joh-footer-grid="1" data-reveal="up" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr)); gap:clamp(28px,4vw,64px); opacity:0; transform:translateY(28px); transition:opacity 1s cubic-bezier(.2,.7,.3,1), transform 1s cubic-bezier(.2,.7,.3,1);">
       <div>
         <p style="font-family:var(--serif); font-size:clamp(19px,1.8vw,25px); line-height:1.25; max-width:16ch;">Dr Justine O'Hara</p>
         <p style="margin-top:6px; font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:#A8A19E;">Plastic Surgeon</p>
@@ -1075,8 +1075,10 @@ class Component extends DCLogic {
     this.modal();
     this.drawer();
     this.dock();
-    this._onResize = () => { this.layout(); this.runFooter(); };
+    this._onResize = () => { this.layout(); this.runFooter(); this.dockState(); };
     window.addEventListener('resize', this._onResize);
+    window.addEventListener('orientationchange', this._onResize);
+    if (window.visualViewport) window.visualViewport.addEventListener('resize', this._onResize);
     [200, 700, 1600, 3000].forEach(t => setTimeout(() => { this.scan(); this.layout(); }, t));
   }
 
@@ -1084,6 +1086,8 @@ class Component extends DCLogic {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('orientationchange', this._onResize);
+    if (window.visualViewport) window.visualViewport.removeEventListener('resize', this._onResize);
     if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
     if (this._io) this._io.disconnect();
   }
@@ -1112,45 +1116,84 @@ class Component extends DCLogic {
   motionLevel() { return this.props.motionLevel || 'Rich'; }
 
   layout() {
-    const narrow = window.innerWidth < 760;
-    const phone = document.querySelector('[data-joh-phone]');
-    const label = document.querySelector('[data-joh-book-label]');
-    const book = document.querySelector('[data-joh-book]');
-    if (phone) phone.style.display = narrow ? 'none' : 'inline-flex';
-    if (label) label.style.display = narrow ? 'none' : 'inline';
-    if (book) book.style.padding = narrow ? '5px' : '5px 6px 5px 22px';
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const set = (s, p, v) => {
+      const el = typeof s === 'string' ? document.querySelector(s) : s;
+      if (el) el.style[p] = v;
+    };
 
-    const grid = document.querySelector('[data-joh-panel-grid]');
-    const pnav = document.querySelector('[data-joh-panel-nav]');
-    const card = document.querySelector('[data-joh-modal-card]');
-    const stack = window.innerWidth < 940;
-    if (grid) grid.style.gridTemplateColumns = stack ? '1fr' : '1fr 1fr';
-    if (pnav) pnav.style.order = stack ? '2' : '1';
-    if (card) card.style.order = stack ? '1' : '2';
-    if (pnav && stack) pnav.style.paddingTop = 'clamp(40px,6vh,64px)';
-
-    const gal = document.querySelector('[data-joh-gallery]');
-    if (gal) {
-      if (window.innerWidth < 940) {
-        gal.style.display = 'flex';
-        gal.style.flexDirection = 'column';
-      } else {
-        gal.style.display = 'grid';
-        gal.style.flexDirection = '';
-      }
+    /* header ------------------------------------------------------------ */
+    const tiny = w < 380;
+    set('[data-joh-phone]', 'display', w < 900 ? 'none' : 'inline-flex');
+    set('[data-joh-book-label]', 'display', w < 520 ? 'none' : 'inline');
+    set('[data-joh-book]', 'padding', w < 520 ? '5px' : '5px 6px 5px 22px');
+    set('[data-joh-book]', 'minHeight', w < 520 ? '48px' : '52px');
+    set('[data-joh-book-dot]', 'width', w < 520 ? '38px' : '42px');
+    set('[data-joh-book-dot]', 'height', w < 520 ? '38px' : '42px');
+    set('[data-joh-logo-text]', 'display', tiny ? 'none' : 'flex');
+    set('[data-joh-logo-name]', 'fontSize', w < 480 ? '15px' : '17px');
+    set('[data-joh-logo-sub]', 'display', w < 440 ? 'none' : 'block');
+    const mark = document.querySelector('[data-joh-logo-mark]');
+    if (mark) {
+      const s = w < 480 ? '38px' : '44px';
+      mark.style.width = s; mark.style.height = s;
+      mark.style.fontSize = w < 480 ? '11.5px' : '13.5px';
+    }
+    set('[data-joh-header-inner]', 'gap', w < 640 ? '10px' : 'clamp(16px,3vw,48px)');
+    const menuBtn = document.querySelector('[data-joh-menu]');
+    if (menuBtn) {
+      const s = w < 520 ? '48px' : '52px';
+      menuBtn.style.width = s; menuBtn.style.height = s;
     }
 
-    const dockNav = document.querySelector('[data-joh-dock-nav]');
-    const dockLabel = document.querySelector('[data-joh-dock-label]');
-    if (dockNav) dockNav.style.display = window.innerWidth < 820 ? 'none' : 'flex';
-    if (dockLabel) dockLabel.style.display = window.innerWidth < 400 ? 'none' : 'inline';
+    /* hero --------------------------------------------------------------- */
+    const shortHero = h < 680;
+    set('[data-joh-hero-chips]', 'display', (shortHero || w < 560) ? 'none' : 'flex');
+    set('[data-joh-hero-strip]', 'display', (shortHero || w < 420) ? 'none' : 'flex');
+    set('[data-joh-h1]', 'fontSize', (h < 560 && w > h) ? 'clamp(34px,6vw,58px)' : 'clamp(40px,8.6vw,132px)');
 
-    const short = window.innerHeight < 680;
-    const chips = document.querySelector('[data-joh-hero-chips]');
-    const strip = document.querySelector('[data-joh-hero-strip]');
-    if (chips) chips.style.display = short ? 'none' : 'flex';
-    if (strip) strip.style.display = short ? 'none' : 'flex';
+    /* section grids ------------------------------------------------------ */
+    set('[data-joh-about-grid]', 'gridTemplateColumns', w < 900 ? '1fr' : 'repeat(auto-fit,minmax(min(300px,100%),1fr))');
+    set('[data-joh-enquire-grid]', 'gridTemplateColumns', w < 900 ? '1fr' : 'repeat(auto-fit,minmax(min(300px,100%),1fr))');
+    set('[data-joh-steps-grid]', 'gridTemplateColumns', w < 620 ? '1fr' : (w < 1080 ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))'));
+    set('[data-joh-footer-grid]', 'gridTemplateColumns', w < 600 ? '1fr' : (w < 1024 ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))'));
 
+    /* about portrait: stop the sticky 3:4 image eating the fold ---------- */
+    const portrait = document.querySelector('[data-joh-about-grid] [data-reveal="fade"] > div');
+    if (portrait) {
+      portrait.style.position = w < 900 ? 'static' : 'sticky';
+      portrait.style.maxHeight = w < 900 ? '62vh' : '';
+      portrait.style.aspectRatio = w < 900 ? '4/3' : '3/4';
+    }
+
+    /* before & after ----------------------------------------------------- */
+    const gal = document.querySelector('[data-joh-gallery]');
+    if (gal) {
+      const stackGal = w < 940;
+      gal.style.display = stackGal ? 'flex' : 'grid';
+      gal.style.flexDirection = stackGal ? 'column' : '';
+    }
+    const baImg = document.querySelector('[data-joh-ba-img]');
+    if (baImg) baImg.style.maxHeight = w < 940 ? 'min(52vh,420px)' : 'min(62vh,560px)';
+    set('[data-joh-thumbs]', 'gridTemplateColumns', w < 520 ? 'repeat(3,minmax(0,1fr))' : 'repeat(auto-fit,minmax(min(110px,100%),1fr))');
+
+    /* dock --------------------------------------------------------------- */
+    set('[data-joh-dock-nav]', 'display', w < 900 ? 'none' : 'flex');
+    set('[data-joh-dock-label]', 'display', w < 420 ? 'none' : 'inline');
+
+    /* menu / booking overlay --------------------------------------------- */
+    const stack = w < 940;
+    set('[data-joh-panel-grid]', 'gridTemplateColumns', stack ? '1fr' : '1fr 1fr');
+    set('[data-joh-panel-nav]', 'order', stack ? '2' : '1');
+    set('[data-joh-modal-card]', 'order', stack ? '1' : '2');
+    set('[data-joh-panel-nav]', 'paddingTop', stack ? 'clamp(36px,5vh,56px)' : 'clamp(72px,9vh,120px)');
+    set('[data-joh-modal-card]', 'paddingTop', stack ? '86px' : '96px');
+    set('[data-joh-close-label]', 'display', w < 560 ? 'none' : 'inline');
+    const close = document.querySelector('[data-joh-modal-close]');
+    if (close) close.style.padding = w < 560 ? '5px' : '5px 6px 5px 22px';
+
+    /* re-measure open accordions ----------------------------------------- */
     this.q('[data-joh-panel]').forEach(p => {
       if (p.dataset.open === '1') p.style.maxHeight = p.scrollHeight + 'px';
     });
@@ -1166,6 +1209,7 @@ class Component extends DCLogic {
         if (!e.isIntersecting) return;
         const el = e.target;
         const d = parseInt(el.dataset.revealDelay || '0', 10);
+        this._ioFired = true;
         setTimeout(() => {
           el.style.opacity = '1';
           el.style.transform = 'none';
@@ -1176,10 +1220,7 @@ class Component extends DCLogic {
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
     this.scan();
-    setTimeout(() => {
-      const any = this.q('[data-reveal]').some(el => el.style.opacity === '1');
-      if (!any) this.showAll();
-    }, 4000);
+    setTimeout(() => { if (!this._ioFired) this.showAll(); }, 4000);
   }
 
   scan() {
